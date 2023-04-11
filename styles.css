@@ -8,8 +8,10 @@ body{
     min-height: 100vh;
     display: flex;
     direction: rtl;
-    background:linear-gradient(0deg, rgba(18, 17, 58, 0.3), rgba(17, 20, 61, 0.3)), url("./assets/img/low-angle-shot-mesmerizing-starry-sky.jpg");
+    background:linear-gradient(0deg, rgba(14, 13, 39, 0.7), rgba(11, 13, 36, 0.7)), url("./assets/img/low-angle-shot-mesmerizing-starry-sky.jpg");
     background-size: cover;
+    color: white;
+    font-size: 25px;
 }
 
 aside{
@@ -32,8 +34,9 @@ ul{
 
 li{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
     height: 100px;
     width: 100%;
     border-radius: 35px 0 0 35px;
@@ -45,9 +48,18 @@ li{
     background-color: rgba(83, 83, 114, 0.5);
 }
 
+li span{
+    display: none;
+}
+
+.active span{
+    display: inline-block;
+}
+
 ul li img{
-    width: 200px;
-    height: 60px;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
 }
 
 #meat-logo{
