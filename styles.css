@@ -102,6 +102,7 @@ iframe{
     width: 100%;
     min-height: 100%;
     border: none;
+    transition: all 0.5s;
 }
 
 .iframe-active{

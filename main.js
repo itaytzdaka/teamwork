@@ -53,6 +53,9 @@
     logoArray.forEach((logo, index) => {
 
 
+        const iframe = document.createElement("iframe");
+        iframe.src = logoArray[index].html;
+
         const li = document.createElement("li");
         li.innerHTML = `
         <div class="logo-container">
@@ -60,9 +63,6 @@
             <span>מהיום הכל במקום אחד</span>
         </div>
         `;
-
-        const iframe = document.createElement("iframe");
-        iframe.src = logoArray[index].html;
 
         li.addEventListener("click", (e) => {
 
@@ -95,8 +95,13 @@
 
         });
 
+        //default: the first logo is active
+        if(index === 0){
+            li.classList.add("li-active");
+            iframe.classList.add("iframe-active");
+        }
+
         //add elements to html
-        
         ul.appendChild(li);
         main.appendChild(iframe);
     });
