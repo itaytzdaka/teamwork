@@ -97,15 +97,14 @@ ul .li-active #meat-logo{
 }
 
 iframe{
-    display: none;
+    position: absolute;
     opacity: 0;
     width: 100%;
-    min-height: 100%;
     border: none;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .iframe-active{
-    display: block;
+    position: relative;
     opacity: 1;
 }
