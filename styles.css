@@ -56,24 +56,23 @@ ul li img{
 ul li span{
     position: absolute;
     opacity: 0;
-    transition: all 1s;
     cursor: pointer;
     font-size: 0.5em;
     transition: all 0s ease-in;
 }
 
-ul li.active{
+ul .li-active{
     background-color: rgba(113, 113, 139, 0.3);
     height: 170px;
 }
 
 
-ul li.active img{
+ul .li-active img{
     width: 280px;
     height: 80px;
 }
 
-ul li.active span{
+ul .li-active span{
     position: relative;
     opacity: 1;
     font-size: inherit;
@@ -84,7 +83,7 @@ ul li.active span{
     height: 70px;
 }
 
-ul li.active #meat-logo{
+ul .li-active #meat-logo{
     height: 100px;
 }
 
@@ -95,4 +94,17 @@ ul li.active #meat-logo{
     justify-content: center;
     gap: 10px;
     height: 100%;
+}
+
+iframe{
+    display: none;
+    opacity: 0;
+    width: 100%;
+    min-height: 100%;
+    border: none;
+}
+
+.iframe-active{
+    display: block;
+    opacity: 1;
 }
