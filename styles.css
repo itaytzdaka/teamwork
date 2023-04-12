@@ -4,18 +4,20 @@
     box-sizing: border-box;
 }
 
-body{
+.container{
     min-height: 100vh;
     display: flex;
     direction: rtl;
-    background:linear-gradient(0deg, rgba(14, 13, 39, 0.7), rgba(11, 13, 36, 0.7)), url("./assets/img/low-angle-shot-mesmerizing-starry-sky.jpg");
+    background:linear-gradient(0deg, rgba(8, 12, 43, 0.582), rgba(7, 11, 41, 0.568)), url("./assets/img/low-angle-shot-mesmerizing-starry-sky.jpg");
+    backdrop-filter: blur(0.5px);
     background-size: cover;
     color: white;
-    font-size: 25px;
+    font-size: 35px;
+    padding: 10px 0;
 }
 
 aside{
-    width: 35%;
+    width: 570px;
 }
 
 aside nav{
@@ -27,42 +29,59 @@ main{
 }
 
 ul{
+    height: 100%;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 li{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     flex-direction: column;
-    height: 100px;
+    height: 125px;
     width: 100%;
-    border-radius: 35px 0 0 35px;
+    border-radius: 50px 0 0 35px;
     flex-grow: 1;
-    margin: 2px 0;
+    padding-right: 200px;
+    align-items: start;
 }
 
-.active{
-    background-color: rgba(83, 83, 114, 0.5);
+ul .active{
+    background-color: rgba(113, 113, 139, 0.3);
+    height: 170px;
 }
 
 li span{
     display: none;
 }
 
-.active span{
-    display: inline-block;
-}
-
 ul li img{
-    width: 170px;
+    width: 180px;
     height: 50px;
     cursor: pointer;
 }
 
+ul .active img{
+    width: 280px;
+    height: 80px;
+}
+
+ul .active span{
+    display: inline-block;
+    cursor: pointer;
+}
+
 #meat-logo{
+    height: 70px;
+}
+
+ul .active #meat-logo{
+    height: 100px;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    width: 250px;
 }
