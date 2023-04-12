@@ -34,7 +34,7 @@ ul{
     flex-direction: column;
 }
 
-li{
+ul li{
     display: flex;
     flex-direction: column;
     height: 125px;
@@ -46,21 +46,6 @@ li{
     transition: all 1s;
 }
 
-ul .active{
-    background-color: rgba(113, 113, 139, 0.3);
-    height: 170px;
-}
-
-ul li span{
-    opacity: 0;
-    /* display: none; */
-    transition: all 1s;
-}
-
-ul .active span{
-    opacity: 1;
-}
-
 ul li img{
     width: 180px;
     height: 50px;
@@ -68,21 +53,38 @@ ul li img{
     transition: all 0.5s;
 }
 
-ul .active img{
+ul li span{
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+    cursor: pointer;
+    font-size: 0.5em;
+    transition: all 0s ease-in;
+}
+
+ul li.active{
+    background-color: rgba(113, 113, 139, 0.3);
+    height: 170px;
+}
+
+
+ul li.active img{
     width: 280px;
     height: 80px;
 }
 
-ul .active span{
-    display: inline-block;
-    cursor: pointer;
+ul li.active span{
+    position: relative;
+    opacity: 1;
+    font-size: inherit;
+    transition: all 0.5s ease-out;
 }
 
 #meat-logo{
     height: 70px;
 }
 
-ul .active #meat-logo{
+ul li.active #meat-logo{
     height: 100px;
 }
 
